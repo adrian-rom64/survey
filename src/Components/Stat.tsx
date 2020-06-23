@@ -14,7 +14,7 @@ const useStyles = makeStyles({
   },
   icon: {
     margin: 10,
-    backgroundColor: colors.primary,
+    backgroundColor: colors.secondary,
     width: 50,
     height: 50,
     display: 'flex',
