@@ -1,7 +1,6 @@
 import React from 'react'
 import Box from '@material-ui/core/Box'
 import makeStyles from '@material-ui/core/styles/makeStyles'
-import colors from '../Assets/colors'
 
 const useStyles = makeStyles({
   container: {
@@ -13,14 +12,7 @@ const useStyles = makeStyles({
     boxSizing: 'border-box'
   },
   icon: {
-    margin: 10,
-    backgroundColor: colors.secondary,
-    width: 50,
-    height: 50,
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    borderRadius: 25
+    margin: 10
   },
   info: {
     marginLeft: 20
@@ -36,9 +28,9 @@ const useStyles = makeStyles({
 })
 
 interface StatProps {
-  icon: React.ComponentType;
-  title: String;
-  description: String;
+  icon: string;
+  title: string;
+  description: string;
 }
 
 const Stat = (props: StatProps): JSX.Element => {
@@ -47,7 +39,7 @@ const Stat = (props: StatProps): JSX.Element => {
   return (
     <Box className={classes.container}>
       <Box className={classes.icon}>
-        <props.icon />
+        <img src={props.icon} alt={props.title} width={50} height={50}/>
       </Box>
       <Box className={classes.info}>
         <Box className={classes.title}>{props.title}</Box>

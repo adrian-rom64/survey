@@ -2,8 +2,8 @@ import React from 'react'
 import Box from '@material-ui/core/Box'
 import makeStyles from '@material-ui/core/styles/makeStyles'
 import Stat from './Stat'
-import Event from '@material-ui/icons/Event'
-import QuestionAnswer from '@material-ui/icons/QuestionAnswer'
+import Time from '../Assets/icons/time.svg'
+import Opinion from '../Assets/icons/opinion.svg'
 
 const image = 'https://images.unsplash.com/photo-1444723121867-7a241cacace9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80'
 
@@ -50,7 +50,7 @@ const useStyles = makeStyles({
   },
   descriptionBox: {
     backgroundColor: '#efefef',
-    height: 310,
+    height: 300,
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-evenly',
@@ -86,12 +86,12 @@ const Landing = (): JSX.Element => {
       </Box>
       <Box className={classes.header}>
         <Stat
-          icon={Event}
+          icon={Time}
           title='Konsultacja trwa'
           description={`${data.startDate} - ${data.endDate}`}
         />
         <Stat
-          icon={QuestionAnswer}
+          icon={Opinion}
           title='Ilość opinii'
           description={data.voteCount.toString()}
         />
