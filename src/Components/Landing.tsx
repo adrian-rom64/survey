@@ -50,7 +50,7 @@ const useStyles = makeStyles({
   },
   descriptionBox: {
     backgroundColor: '#efefef',
-    height: 300,
+    height: 290,
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-evenly',
